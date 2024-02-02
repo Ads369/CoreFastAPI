@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  web:
+    container_name: integration-ais-ado
+    image: new-gitlab.oits.su:4567/legacy/services/integration-ais-ado:master
+    command: python main.py
+    volumes:
+      - /opt/integration-ais-ado/.environment:/code/.environment
+    ports:
+      - "8000:8000"

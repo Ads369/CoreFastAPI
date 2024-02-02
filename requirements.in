@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+httpx
+redis
+sqlalchemy[asyncio]
+# psycopg
+psycopg[binary,pool]
+geoalchemy2[shapely]
+python-dotenv
+pydantic-settings
+python-multipart

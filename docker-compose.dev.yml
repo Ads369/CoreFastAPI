@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  web:
+    container_name: integration-ais-ado-web
+    command: python main.py
+    # platform: linux/amd64 # Don't use on MacOS
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/code
+    tty: true
+    ports:
+      - "8000:8000"
+
+  # redis:
+  #   image: "redis/redis-stack"
+  #   container_name: integration-ais-ado-redis
+  #   volumes:
+  #     - ./storage/redis-data:/data
+  #   ports:
+  #     - "6379:6379"
+  #     - "13333:8001"
+
+networks:
+  default:
+    name: oits-flask

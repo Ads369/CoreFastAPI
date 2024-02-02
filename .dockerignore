@@ -1,0 +1,10 @@
+.git
+.gitattributes
+.gitignore
+.gitlab-ci.yml
+deploy.sh
+
+README.md
+
+CHANGELOG.md
+docker-compose.yml
